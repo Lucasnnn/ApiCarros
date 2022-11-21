@@ -55,12 +55,12 @@ const atualizarCarroController = async (req, res) => {
   const carroEditado = req.body;
 
   if (
-    !carro ||
-    !carro.ano ||
-    !carro.tipo ||
-    !carro.nome ||
-    !carro.linkFoto ||
-    !carro.potencia
+    !carroEditado ||
+    !carroEditado.ano ||
+    !carroEditado.tipo ||
+    !carroEditado.nome ||
+    !carroEditado.linkFoto ||
+    !carroEditado.potencia
   ) {
     return res.status(404).send({ message: 'Faltando informação !' });
   }
